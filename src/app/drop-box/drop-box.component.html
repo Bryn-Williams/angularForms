@@ -1,0 +1,23 @@
+
+
+  <div (click)="onShipClick('ship')">
+    <h1 [ngClass]="{'redy': showShipInfo}">Shipping Details</h1>
+
+    <div *ngIf="showShipInfo == false; then algo else nada"></div>
+
+    <ng-template #nada></ng-template>
+    <ng-template #algo><h6>HERE WE HAVE THE SHIPPING DETAILS</h6></ng-template>
+  </div>
+
+
+
+
+  <div (click)="onShipClick('goo')">
+    <h1 [class.redy]="showGoosInfo">Goos Details</h1>
+    <div *ngIf="showGoosInfo == false; then algo2 else nada2"></div>
+
+    <ng-template #nada2></ng-template>
+    <ng-template #algo2><h6>HERE WE HAVE THE Goos DETAILS</h6></ng-template>
+  </div>
+
+
